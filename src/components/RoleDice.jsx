@@ -3,7 +3,7 @@ const RoleDice = ({ rolecard, currentcard }) => {
   return (
     <DiceContainer>
       <div className="dice" onClick={rolecard}>
-        <img src={`/src/images/cards/${currentcard}.png`} alt="card 1" />
+        <img src={`./src/images/cards/${currentcard}.png`} alt="card 1" />
       </div>
       <p>Click on Card to shuffle</p>
     </DiceContainer>
