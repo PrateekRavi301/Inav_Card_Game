@@ -3,7 +3,7 @@ import { Button } from "../styled/Button";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import card from "../images/card.jpg";
+import card from "/images/card.jpg";
 
 const StartGame = ({ toggle }) => {
   return (
