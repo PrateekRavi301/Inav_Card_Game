@@ -71,8 +71,12 @@ const GamePlay = () => {
    
 
     if (selectedcardColor === randomcardColor) {
+      console.log(selectedcardColor+"="+randomcardColor);
+      setError((prev) => prev + "| +1 for correct card color ");
       setScore((prev) => prev + 1);
     } else {
+      console.log(selectedcardColor+"!="+randomcardColor);
+      setError((prev) => prev + "| -1 for wrong card color ");
       setScore((prev) => prev - 1);
     }
 
@@ -80,24 +84,36 @@ const GamePlay = () => {
 
 
     if (selectedcardType === randomcardType) {
+      console.log(selectedcardType+"="+randomcardType);
+      setError((prev) => prev + "| +10 for correct card type ");
       setScore((prev) => prev + 10);
     } else {
+      console.log(selectedcardType+"!="+randomcardType);
+      setError((prev) => prev + "| -1 for wrong card type ");
       setScore((prev) => prev - 1);
     }
 
     setSelectedcardType(undefined);
 
     if (selectedcardSuit === randomcardSuit) {
+      console.log(selectedcardSuit+"="+randomcardSuit);
+      setError((prev) => prev + "| +100 for correct card suit ");
       setScore((prev) => prev + 100);
     } else {
+      console.log(selectedcardSuit+"!="+randomcardSuit);
+      setError((prev)=>prev + "| -1 for wrong card suit ");
       setScore((prev) => prev - 1);
     }
 
     setSelectedcardSuit(undefined);
 
     if (selectedcardName === randomcardName) {
+      console.log(selectedcardName+"="+randomcardName);
+      setError((prev)=>prev+"| +1000 for correct card name |");
       setScore((prev) => prev + 1000);
     } else {
+      console.log(selectedcardName+"!="+randomcardName);
+      setError((prev)=>prev+ "| -1 for wrong card name |");
       setScore((prev) => prev - 1);
     }
     sethScore((prev) => Math.max(prev,score));
@@ -107,6 +123,7 @@ const GamePlay = () => {
   const resetScore = () => {
     setScore(0);
     sethScore(0);
+    setError("");
     setCurrentcard("clubs_A");
   };
 

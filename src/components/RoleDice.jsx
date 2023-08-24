@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 const RoleDice = ({ rolecard, currentcard }) => {
+  const imagesrc = '/images/cards/'+currentcard+'.png';
   return (
     <DiceContainer>
       <div className="dice" onClick={rolecard}>
-        <img src={`/images/cards/${currentcard}.png`} alt="card 1" />
+        <img src={imagesrc} alt="card 1"/>
       </div>
       <p>Click on Card to shuffle</p>
     </DiceContainer>
